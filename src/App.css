@@ -1,0 +1,167 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif; /* Set a base font */
+}
+
+/* Flex container for messages */
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto; /* Keep messages contained */
+}
+
+/* Styling for user message bubble */
+.messages .userMsg {
+  background-color: #181818;
+  padding: 10px 20px;
+  border-radius: 30px;
+  max-width: 60vw; /* Adjusted for responsiveness */
+  align-self: flex-end;
+  color: #fff;
+  word-wrap: break-word;
+}
+
+/* Styling for AI response bubble */
+.messages .responseMsg {
+  background-color: #302f2f;
+  padding: 10px 20px;
+  border-radius: 30px;
+  max-width: 60vw; /* Adjusted for responsiveness */
+  align-self: flex-start;
+  color: #fff;
+  word-wrap: break-word;
+}
+
+/* Card styles for the home screen options */
+.card {
+  min-width: 200px;
+  min-height: 150px;
+  text-align: left;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background-color: #181818;
+  padding: 16px;
+  position: relative;
+  border-radius: 12px;
+}
+
+/* Hover effect for cards */
+.card:hover {
+  background-color: #272626;
+}
+
+/* Input box styling */
+.input-box, .inputbox {
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  background-color: #181818;
+  width: 100%;
+  max-width: 80vw; /* Updated to be more fluid */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.input-box input, .inputbox input {
+  flex: 1;
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Send button styling */
+button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding-right: 15px;
+}
+
+/* Placeholder text style */
+input::placeholder {
+  color: #888;
+}
+
+/* Footer text styling */
+p.text-gray-500 {
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .messages .userMsg, .messages .responseMsg {
+    max-width: 80vw; /* Increased width for smaller screens */
+  }
+
+  .card {
+    min-width: 150px; /* Adjusted for smaller screens */
+    min-height: 120px; /* Adjusted for smaller screens */
+  }
+
+  .input-box, .inputbox {
+    max-width: 90vw; /* Wider input on smaller screens */
+  }
+
+  p.text-gray-500 {
+    font-size: 10px; /* Smaller footer text */
+  }
+
+  h1 {
+    font-size: 2.5rem; /* Responsive font size */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Responsive font size */
+  }
+
+  /* Additional styles for ultra-small screens */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem; /* Further reduction */
+    }
+
+    h2 {
+      font-size: 1.2rem; /* Further reduction */
+    }
+
+    button {
+      padding: 10px; /* Responsive button padding */
+    }
+  }
+}
+.boxes {
+  display: flex;               /* Enable flexbox */
+  flex-wrap: wrap;            /* Allow wrapping for smaller screens */
+  justify-content: center;     /* Center cards horizontally */
+  gap: 16px;                  /* Gap between cards */
+  margin-top: 10px;           /* Spacing from the top */
+}
+/* Card styles for the home screen options */
+.card {
+  width: 200px;  /* Fixed width */
+  height: 150px; /* Fixed height */
+  text-align: left;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background-color: #181818;
+  padding: 16px;
+  position: relative;
+  border-radius: 12px;
+  display: flex;         /* Added flex to align content */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Space between content */
+}
+
+/* Hover effect for cards */
+.card:hover {
+  background-color: #272626;
+}
